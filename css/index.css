@@ -1,1 +1,328 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Mono Regular'), local('DMMono-Regular'), url(https://fonts.gstatic.com/s/dmmono/v1/aFTU7PB1QTsUX8KYhh0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxswWw.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  /*width: 800px;*/
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: grey;
+}
+/*.skill-type {
+    text-align: left;
+    font-size: 0.8em;
+}*/
+.main-point1 {
+  text-align: left;
+  font-size: 1.7rem;
+  /*height: 10vh;*/
+}
+.main-point2 {
+  text-align: left;
+  font-size: 1.7rem;
+  /*width: 50%;
+    height: 10vh;*/
+}
+.skill-type {
+  text-align: left;
+  font-size: 0.9em;
+}
+.style {
+  list-style: circle;
+  font-size: 1rem;
+  margin: 1% 10%;
+}
+.row {
+  width: 30%;
+  padding: 10px 12px;
+}
+header {
+  margin: 2% 5%;
+  width: 60%;
+  padding: 2% 0;
+}
+header nav {
+  margin: 0 0 0 50%;
+  display: flex;
+  justify-content: space-around;
+}
+header nav a {
+  text-decoration: none;
+  margin: 10px;
+  color: lightgrey;
+}
+@media (max-width: 500px) {
+  header {
+    width: 60%;
+  }
+}
+.container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  background-color: lightgrey;
+  border-radius: 20px;
+}
+.container1 .my-picture {
+  width: 60%;
+  margin: 2%;
+  height: 30%;
+}
+.container1 .my-picture img {
+  width: 100%;
+  border-radius: 50%;
+}
+.container1 .intro {
+  align-self: center;
+}
+.container1 .intro .name {
+  font-size: 2.5rem;
+  text-align: left;
+}
+.container1 .intro .tittle {
+  font-size: 1.5rem;
+}
+.container1 .intro .button-parent {
+  display: flex;
+  justify-content: center;
+}
+.container1 .intro .button-parent .portfolio-button {
+  background-color: lightblue;
+  border-radius: 10px;
+}
+.container1 .intro .button-parent .portfolio-button a {
+  text-decoration: none;
+  font-size: 1.6em;
+  color: black;
+}
+.container1 .intro .button-parent .portfolio-button:hover {
+  background-color: green;
+}
+@media (max-width: 500px) {
+  .container1 .intro .button-parent {
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.main-content {
+  /*display: flex;*/
+  margin: 10px;
+  padding: 10px;
+}
+.main-content .skills {
+  display: flex;
+  /*flex-flow: column;*/
+  background-color: lightgrey;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1.7rem;
+  /*height: 10vh;*/
+}
+.main-content .skills .language-skills {
+  width: 33%;
+  margin-top: 5%;
+  text-align: left;
+  font-size: 0.9em;
+}
+.main-content .skills .computer-skills {
+  width: 33%;
+  margin-top: 5%;
+  text-align: left;
+  font-size: 0.9em;
+}
+@media (max-width: 500px) {
+  .main-content .skills {
+    display: flex;
+    background-color: lightgrey;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1.7rem;
+    /*height: 10vh;*/
+  }
+}
+.main-content .work-experience {
+  background-color: lightgrey;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1.7rem;
+  /*height: 10vh;*/
+}
+.main-content .work-experience .content-table {
+  width: 90%;
+  margin-left: 8%;
+  margin-top: 2%;
+}
+.main-content .work-experience .content-table thead {
+  font-size: 0.9em;
+  background-color: #009879;
+}
+.main-content .work-experience .content-table thead tr {
+  font-size: 0.9em;
+  width: 30%;
+  padding: 10px 12px;
+}
+.main-content .work-experience .content-table tbody {
+  font-size: 1rem;
+  background-color: lightgrey;
+  width: 30%;
+  padding: 10px 12px;
+}
+.main-content .contacts {
+  background-color: lightgrey;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1.7rem;
+  /*height: 10vh;*/
+}
+.main-content .contacts p {
+  padding: 2% 8%;
+  font-size: 1rem;
+}
+footer {
+  text-align: center;
+  margin: 40px 0 20px;
+}
