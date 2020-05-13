@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Lato:ital@1&display=swap');
 
 html,
 body,
@@ -191,32 +191,12 @@ body {
     padding: 10px 12px;
 }
 
-.content-table {
-    width: 90%;
-    margin-left: 8%;
-    margin-top: 2%;
 
-    thead {
-        font-size: @fontsizeh3;
-        background-color: #009879;
-
-        tr {
-            font-size: @fontsizeh3;
-
-            .row ();
-        }
-
-    }
-
-    tbody {
-        font-size: 1rem;
-        background-color: @backgroundlightgrey
-        .row ();
-    }
-}
 
 header {
     margin: 2% 5%;
+    width: 60%;
+    padding: 2% 0;
 
     nav {
         margin: 0 0 0 50%;
@@ -229,6 +209,10 @@ header {
         margin: 10px;
         color: @fontcolor;
     }
+
+    @media(max-width: 500px) {
+        width: 60%;
+    }
 }
 
 
@@ -240,22 +224,59 @@ header {
     background-color: lightgrey;
     border-radius: 20px;
 
-    .container1 div {
-        width: 50%;
-        margin: 2% 0
+    .my-picture {
+        width: 60%;
+        margin: 2%;
+        height: 30%;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
     }
 
-    .intro h2.name {
-        font-size: 2.5rem;
-    }
+    .intro {
+        align-self: center;
 
-    .intro h2.tittle {
-        font-size: 1.4rem;
-    }
+        .name {
+            font-size: 2.5rem;
+            text-align: left;
+        }
 
-    img {
-        width: 50%;
-        border-radius: 30px;
+        .tittle {
+            font-size: 1.5rem;
+        }
+
+        .button-parent {
+            display: flex;
+            justify-content: center;
+
+
+
+            .portfolio-button {
+                background-color: lightblue;
+                border-radius: 10px;
+
+                a {
+                    text-decoration: none;
+                    font-size: 1.6em;
+                    color: black;
+
+                }
+
+                &:hover {
+                    background-color: green;
+                }
+            }
+
+            @media(max-width: 500px) {
+                margin: 3%;
+                display: flex;
+                justify-content: center;
+            }
+
+
+        }
     }
 }
 
@@ -267,6 +288,8 @@ header {
     .skills {
         display: flex;
         /*flex-flow: column;*/
+        background-color: @backgroundlightgrey;
+        border-radius: 10px;
         .main-point1();
 
         .language-skills {
@@ -277,15 +300,65 @@ header {
 
         .computer-skills {
             .language-skills ();
+
+        }
+
+        @media(max-width: 500px) {
+            display: flex;
+            background-color: @backgroundlightgrey;
+            border-radius: 10px;
+            .main-point1();
+
+
+
         }
     }
 
     .work-experience {
-        /*display: flex;
-        flex-flow: column;*/
-        .main-point2();
-        .content-table ();
+        background-color: @backgroundlightgrey;
+        border-radius: 10px;
+        .main-point1();
+
+        .content-table {
+            width: 90%;
+            margin-left: 8%;
+            margin-top: 2%;
+
+            thead {
+                font-size: @fontsizeh3;
+                background-color: #009879;
+
+                tr {
+                    font-size: @fontsizeh3;
+
+                    .row ();
+                }
+
+            }
+
+            tbody {
+                font-size: 1rem;
+                background-color: @backgroundlightgrey;
+                .row ();
+            }
+        }
 
 
     }
+
+    .contacts {
+        background-color: @backgroundlightgrey;
+        border-radius: 10px;
+        .main-point1();
+
+        p {
+            padding: 2% 8%;
+            font-size: 1rem;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    margin: 40px 0 20px;
 }
